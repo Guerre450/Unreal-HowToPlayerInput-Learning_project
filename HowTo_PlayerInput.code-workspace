@@ -1,0 +1,879 @@
+{
+	"folders": [
+		{
+			"name": "HowTo_PlayerInput",
+			"path": "."
+		},
+		{
+			"name": "UE5",
+			"path": "/media/guerre450/faster/Linux_Unreal_Engine_5.5.0"
+		}
+	],
+	"settings": {
+		"typescript.tsc.autoDetect": "off",
+		"npm.autoDetect": "off",
+		"terminal.integrated.env.linux": {
+			"PATH": "/media/guerre450/faster/Linux_Unreal_Engine_5.5.0/Engine/Binaries/ThirdParty/DotNet/8.0.300/linux-x64:${env:PATH}",
+			"DOTNET_ROOT": "/media/guerre450/faster/Linux_Unreal_Engine_5.5.0/Engine/Binaries/ThirdParty/DotNet/8.0.300/linux-x64",
+			"DOTNET_HOST_PATH": "/media/guerre450/faster/Linux_Unreal_Engine_5.5.0/Engine/Binaries/ThirdParty/DotNet/8.0.300/linux-x64/dotnet",
+			"DOTNET_MULTILEVEL_LOOKUP": "0",
+			"DOTNET_ROLL_FORWARD": "LatestMajor"
+		}
+	},
+	"extensions": {
+		"recommendations": [
+			"ms-vscode.cpptools",
+			"ms-dotnettools.csharp"
+		]
+	},
+	"tasks": {
+		"version": "2.0.0",
+		"tasks": [
+			{
+				"label": "HowTo_PlayerInput Linux Debug Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"HowTo_PlayerInput",
+					"Linux",
+					"Debug",
+					"/media/guerre450/faster/HowTo_PlayerInput/HowTo_PlayerInput.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/media/guerre450/faster/Linux_Unreal_Engine_5.5.0"
+				}
+			},
+			{
+				"label": "HowTo_PlayerInput Linux Debug Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"HowTo_PlayerInput",
+					"Linux",
+					"Debug",
+					"/media/guerre450/faster/HowTo_PlayerInput/HowTo_PlayerInput.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"HowTo_PlayerInput Linux Debug Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/media/guerre450/faster/Linux_Unreal_Engine_5.5.0"
+				}
+			},
+			{
+				"label": "HowTo_PlayerInput Linux Debug Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"HowTo_PlayerInput",
+					"Linux",
+					"Debug",
+					"/media/guerre450/faster/HowTo_PlayerInput/HowTo_PlayerInput.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/media/guerre450/faster/Linux_Unreal_Engine_5.5.0"
+				}
+			},
+			{
+				"label": "HowTo_PlayerInput Linux DebugGame Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"HowTo_PlayerInput",
+					"Linux",
+					"DebugGame",
+					"/media/guerre450/faster/HowTo_PlayerInput/HowTo_PlayerInput.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/media/guerre450/faster/Linux_Unreal_Engine_5.5.0"
+				}
+			},
+			{
+				"label": "HowTo_PlayerInput Linux DebugGame Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"HowTo_PlayerInput",
+					"Linux",
+					"DebugGame",
+					"/media/guerre450/faster/HowTo_PlayerInput/HowTo_PlayerInput.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"HowTo_PlayerInput Linux DebugGame Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/media/guerre450/faster/Linux_Unreal_Engine_5.5.0"
+				}
+			},
+			{
+				"label": "HowTo_PlayerInput Linux DebugGame Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"HowTo_PlayerInput",
+					"Linux",
+					"DebugGame",
+					"/media/guerre450/faster/HowTo_PlayerInput/HowTo_PlayerInput.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/media/guerre450/faster/Linux_Unreal_Engine_5.5.0"
+				}
+			},
+			{
+				"label": "HowTo_PlayerInput Linux Development Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"HowTo_PlayerInput",
+					"Linux",
+					"Development",
+					"/media/guerre450/faster/HowTo_PlayerInput/HowTo_PlayerInput.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/media/guerre450/faster/Linux_Unreal_Engine_5.5.0"
+				}
+			},
+			{
+				"label": "HowTo_PlayerInput Linux Development Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"HowTo_PlayerInput",
+					"Linux",
+					"Development",
+					"/media/guerre450/faster/HowTo_PlayerInput/HowTo_PlayerInput.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"HowTo_PlayerInput Linux Development Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/media/guerre450/faster/Linux_Unreal_Engine_5.5.0"
+				}
+			},
+			{
+				"label": "HowTo_PlayerInput Linux Development Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"HowTo_PlayerInput",
+					"Linux",
+					"Development",
+					"/media/guerre450/faster/HowTo_PlayerInput/HowTo_PlayerInput.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/media/guerre450/faster/Linux_Unreal_Engine_5.5.0"
+				}
+			},
+			{
+				"label": "HowTo_PlayerInput Linux Test Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"HowTo_PlayerInput",
+					"Linux",
+					"Test",
+					"/media/guerre450/faster/HowTo_PlayerInput/HowTo_PlayerInput.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/media/guerre450/faster/Linux_Unreal_Engine_5.5.0"
+				}
+			},
+			{
+				"label": "HowTo_PlayerInput Linux Test Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"HowTo_PlayerInput",
+					"Linux",
+					"Test",
+					"/media/guerre450/faster/HowTo_PlayerInput/HowTo_PlayerInput.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"HowTo_PlayerInput Linux Test Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/media/guerre450/faster/Linux_Unreal_Engine_5.5.0"
+				}
+			},
+			{
+				"label": "HowTo_PlayerInput Linux Test Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"HowTo_PlayerInput",
+					"Linux",
+					"Test",
+					"/media/guerre450/faster/HowTo_PlayerInput/HowTo_PlayerInput.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/media/guerre450/faster/Linux_Unreal_Engine_5.5.0"
+				}
+			},
+			{
+				"label": "HowTo_PlayerInput Linux Shipping Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"HowTo_PlayerInput",
+					"Linux",
+					"Shipping",
+					"/media/guerre450/faster/HowTo_PlayerInput/HowTo_PlayerInput.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/media/guerre450/faster/Linux_Unreal_Engine_5.5.0"
+				}
+			},
+			{
+				"label": "HowTo_PlayerInput Linux Shipping Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"HowTo_PlayerInput",
+					"Linux",
+					"Shipping",
+					"/media/guerre450/faster/HowTo_PlayerInput/HowTo_PlayerInput.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"HowTo_PlayerInput Linux Shipping Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/media/guerre450/faster/Linux_Unreal_Engine_5.5.0"
+				}
+			},
+			{
+				"label": "HowTo_PlayerInput Linux Shipping Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"HowTo_PlayerInput",
+					"Linux",
+					"Shipping",
+					"/media/guerre450/faster/HowTo_PlayerInput/HowTo_PlayerInput.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/media/guerre450/faster/Linux_Unreal_Engine_5.5.0"
+				}
+			},
+			{
+				"label": "HowTo_PlayerInput LinuxArm64 Debug Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"HowTo_PlayerInput",
+					"LinuxArm64",
+					"Debug",
+					"/media/guerre450/faster/HowTo_PlayerInput/HowTo_PlayerInput.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/media/guerre450/faster/Linux_Unreal_Engine_5.5.0"
+				}
+			},
+			{
+				"label": "HowTo_PlayerInput LinuxArm64 Debug Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"HowTo_PlayerInput",
+					"LinuxArm64",
+					"Debug",
+					"/media/guerre450/faster/HowTo_PlayerInput/HowTo_PlayerInput.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"HowTo_PlayerInput LinuxArm64 Debug Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/media/guerre450/faster/Linux_Unreal_Engine_5.5.0"
+				}
+			},
+			{
+				"label": "HowTo_PlayerInput LinuxArm64 Debug Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"HowTo_PlayerInput",
+					"LinuxArm64",
+					"Debug",
+					"/media/guerre450/faster/HowTo_PlayerInput/HowTo_PlayerInput.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/media/guerre450/faster/Linux_Unreal_Engine_5.5.0"
+				}
+			},
+			{
+				"label": "HowTo_PlayerInput LinuxArm64 DebugGame Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"HowTo_PlayerInput",
+					"LinuxArm64",
+					"DebugGame",
+					"/media/guerre450/faster/HowTo_PlayerInput/HowTo_PlayerInput.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/media/guerre450/faster/Linux_Unreal_Engine_5.5.0"
+				}
+			},
+			{
+				"label": "HowTo_PlayerInput LinuxArm64 DebugGame Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"HowTo_PlayerInput",
+					"LinuxArm64",
+					"DebugGame",
+					"/media/guerre450/faster/HowTo_PlayerInput/HowTo_PlayerInput.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"HowTo_PlayerInput LinuxArm64 DebugGame Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/media/guerre450/faster/Linux_Unreal_Engine_5.5.0"
+				}
+			},
+			{
+				"label": "HowTo_PlayerInput LinuxArm64 DebugGame Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"HowTo_PlayerInput",
+					"LinuxArm64",
+					"DebugGame",
+					"/media/guerre450/faster/HowTo_PlayerInput/HowTo_PlayerInput.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/media/guerre450/faster/Linux_Unreal_Engine_5.5.0"
+				}
+			},
+			{
+				"label": "HowTo_PlayerInput LinuxArm64 Development Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"HowTo_PlayerInput",
+					"LinuxArm64",
+					"Development",
+					"/media/guerre450/faster/HowTo_PlayerInput/HowTo_PlayerInput.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/media/guerre450/faster/Linux_Unreal_Engine_5.5.0"
+				}
+			},
+			{
+				"label": "HowTo_PlayerInput LinuxArm64 Development Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"HowTo_PlayerInput",
+					"LinuxArm64",
+					"Development",
+					"/media/guerre450/faster/HowTo_PlayerInput/HowTo_PlayerInput.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"HowTo_PlayerInput LinuxArm64 Development Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/media/guerre450/faster/Linux_Unreal_Engine_5.5.0"
+				}
+			},
+			{
+				"label": "HowTo_PlayerInput LinuxArm64 Development Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"HowTo_PlayerInput",
+					"LinuxArm64",
+					"Development",
+					"/media/guerre450/faster/HowTo_PlayerInput/HowTo_PlayerInput.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/media/guerre450/faster/Linux_Unreal_Engine_5.5.0"
+				}
+			},
+			{
+				"label": "HowTo_PlayerInput LinuxArm64 Test Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"HowTo_PlayerInput",
+					"LinuxArm64",
+					"Test",
+					"/media/guerre450/faster/HowTo_PlayerInput/HowTo_PlayerInput.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/media/guerre450/faster/Linux_Unreal_Engine_5.5.0"
+				}
+			},
+			{
+				"label": "HowTo_PlayerInput LinuxArm64 Test Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"HowTo_PlayerInput",
+					"LinuxArm64",
+					"Test",
+					"/media/guerre450/faster/HowTo_PlayerInput/HowTo_PlayerInput.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"HowTo_PlayerInput LinuxArm64 Test Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/media/guerre450/faster/Linux_Unreal_Engine_5.5.0"
+				}
+			},
+			{
+				"label": "HowTo_PlayerInput LinuxArm64 Test Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"HowTo_PlayerInput",
+					"LinuxArm64",
+					"Test",
+					"/media/guerre450/faster/HowTo_PlayerInput/HowTo_PlayerInput.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/media/guerre450/faster/Linux_Unreal_Engine_5.5.0"
+				}
+			},
+			{
+				"label": "HowTo_PlayerInput LinuxArm64 Shipping Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"HowTo_PlayerInput",
+					"LinuxArm64",
+					"Shipping",
+					"/media/guerre450/faster/HowTo_PlayerInput/HowTo_PlayerInput.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/media/guerre450/faster/Linux_Unreal_Engine_5.5.0"
+				}
+			},
+			{
+				"label": "HowTo_PlayerInput LinuxArm64 Shipping Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"HowTo_PlayerInput",
+					"LinuxArm64",
+					"Shipping",
+					"/media/guerre450/faster/HowTo_PlayerInput/HowTo_PlayerInput.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"HowTo_PlayerInput LinuxArm64 Shipping Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/media/guerre450/faster/Linux_Unreal_Engine_5.5.0"
+				}
+			},
+			{
+				"label": "HowTo_PlayerInput LinuxArm64 Shipping Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"HowTo_PlayerInput",
+					"LinuxArm64",
+					"Shipping",
+					"/media/guerre450/faster/HowTo_PlayerInput/HowTo_PlayerInput.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/media/guerre450/faster/Linux_Unreal_Engine_5.5.0"
+				}
+			},
+			{
+				"label": "HowTo_PlayerInputEditor Linux Debug Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"HowTo_PlayerInputEditor",
+					"Linux",
+					"Debug",
+					"/media/guerre450/faster/HowTo_PlayerInput/HowTo_PlayerInput.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/media/guerre450/faster/Linux_Unreal_Engine_5.5.0"
+				}
+			},
+			{
+				"label": "HowTo_PlayerInputEditor Linux Debug Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"HowTo_PlayerInputEditor",
+					"Linux",
+					"Debug",
+					"/media/guerre450/faster/HowTo_PlayerInput/HowTo_PlayerInput.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"HowTo_PlayerInputEditor Linux Debug Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/media/guerre450/faster/Linux_Unreal_Engine_5.5.0"
+				}
+			},
+			{
+				"label": "HowTo_PlayerInputEditor Linux Debug Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"HowTo_PlayerInputEditor",
+					"Linux",
+					"Debug",
+					"/media/guerre450/faster/HowTo_PlayerInput/HowTo_PlayerInput.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/media/guerre450/faster/Linux_Unreal_Engine_5.5.0"
+				}
+			},
+			{
+				"label": "HowTo_PlayerInputEditor Linux DebugGame Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"HowTo_PlayerInputEditor",
+					"Linux",
+					"DebugGame",
+					"/media/guerre450/faster/HowTo_PlayerInput/HowTo_PlayerInput.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/media/guerre450/faster/Linux_Unreal_Engine_5.5.0"
+				}
+			},
+			{
+				"label": "HowTo_PlayerInputEditor Linux DebugGame Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"HowTo_PlayerInputEditor",
+					"Linux",
+					"DebugGame",
+					"/media/guerre450/faster/HowTo_PlayerInput/HowTo_PlayerInput.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"HowTo_PlayerInputEditor Linux DebugGame Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/media/guerre450/faster/Linux_Unreal_Engine_5.5.0"
+				}
+			},
+			{
+				"label": "HowTo_PlayerInputEditor Linux DebugGame Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"HowTo_PlayerInputEditor",
+					"Linux",
+					"DebugGame",
+					"/media/guerre450/faster/HowTo_PlayerInput/HowTo_PlayerInput.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/media/guerre450/faster/Linux_Unreal_Engine_5.5.0"
+				}
+			},
+			{
+				"label": "HowTo_PlayerInputEditor Linux Development Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"HowTo_PlayerInputEditor",
+					"Linux",
+					"Development",
+					"/media/guerre450/faster/HowTo_PlayerInput/HowTo_PlayerInput.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/media/guerre450/faster/Linux_Unreal_Engine_5.5.0"
+				}
+			},
+			{
+				"label": "HowTo_PlayerInputEditor Linux Development Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"HowTo_PlayerInputEditor",
+					"Linux",
+					"Development",
+					"/media/guerre450/faster/HowTo_PlayerInput/HowTo_PlayerInput.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"HowTo_PlayerInputEditor Linux Development Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/media/guerre450/faster/Linux_Unreal_Engine_5.5.0"
+				}
+			},
+			{
+				"label": "HowTo_PlayerInputEditor Linux Development Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"HowTo_PlayerInputEditor",
+					"Linux",
+					"Development",
+					"/media/guerre450/faster/HowTo_PlayerInput/HowTo_PlayerInput.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/media/guerre450/faster/Linux_Unreal_Engine_5.5.0"
+				}
+			}
+		]
+	},
+	"launch": {
+		"version": "0.2.0",
+		"configurations": [
+			{
+				"name": "Launch HowTo_PlayerInput (Debug)",
+				"request": "launch",
+				"program": "/media/guerre450/faster/HowTo_PlayerInput/Binaries/Linux/UnrealGame-Linux-Debug",
+				"preLaunchTask": "HowTo_PlayerInput Linux Debug Build",
+				"args": [
+				],
+				"cwd": "/media/guerre450/faster/Linux_Unreal_Engine_5.5.0",
+				"type": "cppdbg",
+				"visualizerFile": "/media/guerre450/faster/Linux_Unreal_Engine_5.5.0/Engine/Extras/VisualStudioDebugging/Unreal.natvis",
+				"showDisplayString": true
+			},
+			{
+				"name": "Launch HowTo_PlayerInput (DebugGame)",
+				"request": "launch",
+				"program": "/media/guerre450/faster/HowTo_PlayerInput/Binaries/Linux/UnrealGame-Linux-DebugGame",
+				"preLaunchTask": "HowTo_PlayerInput Linux DebugGame Build",
+				"args": [
+				],
+				"cwd": "/media/guerre450/faster/Linux_Unreal_Engine_5.5.0",
+				"type": "cppdbg",
+				"visualizerFile": "/media/guerre450/faster/Linux_Unreal_Engine_5.5.0/Engine/Extras/VisualStudioDebugging/Unreal.natvis",
+				"showDisplayString": true
+			},
+			{
+				"name": "Launch HowTo_PlayerInput (Development)",
+				"request": "launch",
+				"program": "/media/guerre450/faster/HowTo_PlayerInput/Binaries/Linux/UnrealGame",
+				"preLaunchTask": "HowTo_PlayerInput Linux Development Build",
+				"args": [
+				],
+				"cwd": "/media/guerre450/faster/Linux_Unreal_Engine_5.5.0",
+				"type": "cppdbg",
+				"visualizerFile": "/media/guerre450/faster/Linux_Unreal_Engine_5.5.0/Engine/Extras/VisualStudioDebugging/Unreal.natvis",
+				"showDisplayString": true
+			},
+			{
+				"name": "Launch HowTo_PlayerInput (Test)",
+				"request": "launch",
+				"program": "/media/guerre450/faster/HowTo_PlayerInput/Binaries/Linux/UnrealGame-Linux-Test",
+				"preLaunchTask": "HowTo_PlayerInput Linux Test Build",
+				"args": [
+				],
+				"cwd": "/media/guerre450/faster/Linux_Unreal_Engine_5.5.0",
+				"type": "cppdbg",
+				"visualizerFile": "/media/guerre450/faster/Linux_Unreal_Engine_5.5.0/Engine/Extras/VisualStudioDebugging/Unreal.natvis",
+				"showDisplayString": true
+			},
+			{
+				"name": "Launch HowTo_PlayerInput (Shipping)",
+				"request": "launch",
+				"program": "/media/guerre450/faster/HowTo_PlayerInput/Binaries/Linux/UnrealGame-Linux-Shipping",
+				"preLaunchTask": "HowTo_PlayerInput Linux Shipping Build",
+				"args": [
+				],
+				"cwd": "/media/guerre450/faster/Linux_Unreal_Engine_5.5.0",
+				"type": "cppdbg",
+				"visualizerFile": "/media/guerre450/faster/Linux_Unreal_Engine_5.5.0/Engine/Extras/VisualStudioDebugging/Unreal.natvis",
+				"showDisplayString": true
+			},
+			{
+				"name": "Launch HowTo_PlayerInputEditor (Debug)",
+				"request": "launch",
+				"program": "/media/guerre450/faster/Linux_Unreal_Engine_5.5.0/Engine/Binaries/Linux/UnrealEditor-Linux-Debug",
+				"preLaunchTask": "HowTo_PlayerInputEditor Linux Debug Build",
+				"args": [
+					"/media/guerre450/faster/HowTo_PlayerInput/HowTo_PlayerInput.uproject"
+				],
+				"cwd": "/media/guerre450/faster/Linux_Unreal_Engine_5.5.0",
+				"type": "cppdbg",
+				"visualizerFile": "/media/guerre450/faster/Linux_Unreal_Engine_5.5.0/Engine/Extras/VisualStudioDebugging/Unreal.natvis",
+				"showDisplayString": true
+			},
+			{
+				"name": "Launch HowTo_PlayerInputEditor (DebugGame)",
+				"request": "launch",
+				"program": "/media/guerre450/faster/Linux_Unreal_Engine_5.5.0/Engine/Binaries/Linux/UnrealEditor-Linux-DebugGame",
+				"preLaunchTask": "HowTo_PlayerInputEditor Linux DebugGame Build",
+				"args": [
+					"/media/guerre450/faster/HowTo_PlayerInput/HowTo_PlayerInput.uproject"
+				],
+				"cwd": "/media/guerre450/faster/Linux_Unreal_Engine_5.5.0",
+				"type": "cppdbg",
+				"visualizerFile": "/media/guerre450/faster/Linux_Unreal_Engine_5.5.0/Engine/Extras/VisualStudioDebugging/Unreal.natvis",
+				"showDisplayString": true
+			},
+			{
+				"name": "Launch HowTo_PlayerInputEditor (Development)",
+				"request": "launch",
+				"program": "/media/guerre450/faster/Linux_Unreal_Engine_5.5.0/Engine/Binaries/Linux/UnrealEditor",
+				"preLaunchTask": "HowTo_PlayerInputEditor Linux Development Build",
+				"args": [
+					"/media/guerre450/faster/HowTo_PlayerInput/HowTo_PlayerInput.uproject"
+				],
+				"cwd": "/media/guerre450/faster/Linux_Unreal_Engine_5.5.0",
+				"type": "cppdbg",
+				"visualizerFile": "/media/guerre450/faster/Linux_Unreal_Engine_5.5.0/Engine/Extras/VisualStudioDebugging/Unreal.natvis",
+				"showDisplayString": true
+			},
+			{
+				"name": "Generate Project Files",
+				"type": "coreclr",
+				"request": "launch",
+				"preLaunchTask": "UnrealBuildTool Linux Development Build",
+				"program": "/media/guerre450/faster/Linux_Unreal_Engine_5.5.0/Engine/Build/BatchFiles/RunUBT.bat",
+				"args": [
+					"-projectfiles",
+					"-vscode",
+					"-project=/media/guerre450/faster/HowTo_PlayerInput/HowTo_PlayerInput.uproject",
+					"-game",
+					"-engine",
+					"-dotnet"
+				],
+				"env": {
+					"PATH": "/media/guerre450/faster/Linux_Unreal_Engine_5.5.0/Engine/Binaries/ThirdParty/DotNet/8.0.300/linux-x64:${env:PATH}",
+					"DOTNET_ROOT": "/media/guerre450/faster/Linux_Unreal_Engine_5.5.0/Engine/Binaries/ThirdParty/DotNet/8.0.300/linux-x64",
+					"DOTNET_HOST_PATH": "/media/guerre450/faster/Linux_Unreal_Engine_5.5.0/Engine/Binaries/ThirdParty/DotNet/8.0.300/linux-x64/dotnet",
+					"DOTNET_MULTILEVEL_LOOKUP": "0",
+					"DOTNET_ROLL_FORWARD": "LatestMajor"
+				},
+				"console": "internalConsole",
+				"internalConsoleOptions": "openOnSessionStart",
+				"stopAtEntry": false,
+				"cwd": "/media/guerre450/faster/Linux_Unreal_Engine_5.5.0"
+			}
+		]
+	}
+}
